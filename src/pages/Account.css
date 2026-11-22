@@ -1,0 +1,941 @@
+/* =========================================================
+   ACCOUNT PAGE
+   ========================================================= */
+
+/*
+|--------------------------------------------------------------------------
+| PAGE CONTAINER
+|--------------------------------------------------------------------------
+*/
+
+.account-page {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+    padding: 32px;
+
+    box-sizing: border-box;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| HEADER
+|--------------------------------------------------------------------------
+*/
+
+.account-header {
+    margin-bottom: 28px;
+}
+
+.account-header h1 {
+    margin: 0 0 8px;
+
+    color: #111827;
+
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.account-header p {
+    margin: 0;
+
+    color: #6b7280;
+
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| CARD ROWS
+|--------------------------------------------------------------------------
+|
+| Account.jsx has:
+|
+| Row 1:
+| Profile / Subscription / AI Usage
+|
+| Row 2:
+| Billing / Upgrade / AI Credits
+|
+*/
+
+.account-card-row {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0, 1fr)
+        );
+
+    gap: 24px;
+
+    margin-bottom: 24px;
+
+    box-sizing: border-box;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| ACCOUNT CARDS
+|--------------------------------------------------------------------------
+*/
+
+.account-page .account-card {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+
+    box-sizing: border-box;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| PROFILE
+|--------------------------------------------------------------------------
+*/
+
+.account-profile {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+.account-profile p {
+    margin: 0;
+
+    color: #4b5563;
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    overflow-wrap: anywhere;
+}
+
+.account-profile strong {
+    color: #111827;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| PROFILE EDIT
+|--------------------------------------------------------------------------
+*/
+
+.account-profile-edit {
+    width: 100%;
+}
+
+.account-profile-edit label {
+    color: #374151;
+}
+
+.account-profile-edit input {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 10px 12px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #111827;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.account-profile-edit input:focus {
+    border-color: #4f46e5;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(79, 70, 229, 0.10);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| SUBSCRIPTION
+|--------------------------------------------------------------------------
+*/
+
+.account-subscription {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+.account-subscription p {
+    margin: 0;
+
+    color: #4b5563;
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    overflow-wrap: anywhere;
+}
+
+.account-subscription strong {
+    color: #111827;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| AI USAGE
+|--------------------------------------------------------------------------
+*/
+
+.account-usage {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+.account-usage p {
+    width: 100%;
+
+    margin: 0;
+
+    color: #4b5563;
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    overflow-wrap: anywhere;
+}
+
+.account-usage strong {
+    color: #111827;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| AI CREDIT PROGRESS
+|--------------------------------------------------------------------------
+*/
+
+.account-credit-bar {
+    width: 100%;
+
+    height: 10px;
+
+    margin-top: 4px;
+
+    overflow: hidden;
+
+    border-radius: 999px;
+
+    background: #e5e7eb;
+}
+
+.account-credit-progress {
+    height: 100%;
+    max-width: 100%;
+
+    border-radius: inherit;
+
+    background: #4f46e5;
+
+    transition:
+        width 0.3s ease;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| BILLING
+|--------------------------------------------------------------------------
+*/
+
+.account-billing-card {
+    min-width: 0;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| PAYMENT HISTORY
+|--------------------------------------------------------------------------
+|
+| Important:
+| This is intentionally NOT a flex container.
+|
+*/
+
+.account-page .payment-history {
+    width: 100%;
+
+    display: block;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| PAYMENT ROW
+|--------------------------------------------------------------------------
+*/
+
+.account-page .payment-row {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.4fr)
+        minmax(120px, 1fr)
+        auto;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 16px 0;
+
+    box-sizing: border-box;
+
+    border-bottom:
+        1px solid #e5e7eb;
+}
+
+.account-page .payment-row:first-child {
+    padding-top: 0;
+}
+
+.account-page .payment-row:last-child {
+    padding-bottom: 0;
+
+    border-bottom: none;
+}
+
+.account-page .payment-row strong {
+    display: block;
+
+    color: #111827;
+
+    font-size: 14px;
+
+    overflow-wrap: anywhere;
+}
+
+.account-page .payment-row p {
+    margin: 5px 0 0;
+
+    color: #6b7280;
+
+    font-size: 13px;
+    line-height: 1.5;
+
+    overflow-wrap: anywhere;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| PAYMENT STATUS
+|--------------------------------------------------------------------------
+*/
+
+.account-page .payment-status {
+    display: inline-flex;
+
+    align-items: center;
+
+    min-height: 28px;
+
+    padding: 5px 10px;
+
+    box-sizing: border-box;
+
+    border-radius: 999px;
+
+    background: #f3f4f6;
+
+    color: #4b5563;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-transform: capitalize;
+
+    white-space: nowrap;
+}
+
+.account-page .payment-success {
+    background: #ecfdf5;
+
+    color: #047857;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| EMPTY BILLING STATE
+|--------------------------------------------------------------------------
+*/
+
+.account-page .empty-payments {
+    width: 100%;
+}
+
+.account-page .empty-payments p {
+    margin: 0 0 16px;
+
+    color: #6b7280;
+
+    line-height: 1.6;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| BILLING PAGINATION
+|--------------------------------------------------------------------------
+*/
+
+.account-page .payment-pagination {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 16px;
+
+    margin-top: 20px;
+    padding-top: 18px;
+
+    border-top:
+        1px solid #f1f5f9;
+
+    box-sizing: border-box;
+}
+
+.account-page .payment-pagination span {
+    color: #4b5563;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| UPGRADE
+|--------------------------------------------------------------------------
+*/
+
+.account-upgrade-card {
+    min-width: 0;
+}
+
+.account-upgrade-card h3 {
+    margin: 0 0 10px;
+
+    color: #111827;
+
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.account-upgrade-card p {
+    margin: 0 0 18px;
+
+    color: #6b7280;
+
+    line-height: 1.6;
+}
+
+.account-upgrade-card ul {
+    margin: 0 0 20px;
+
+    padding-left: 20px;
+
+    color: #4b5563;
+
+    line-height: 1.8;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| AI CREDITS CARD
+|--------------------------------------------------------------------------
+*/
+
+.account-page .ai-credits-card {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+
+    box-sizing: border-box;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| AI CREDITS HEADER
+|--------------------------------------------------------------------------
+*/
+
+.ai-credits-header {
+    margin-bottom: 18px;
+}
+
+.ai-credits-header h2 {
+    margin: 0;
+
+    color: #111827;
+
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| AI CREDIT ROW
+|--------------------------------------------------------------------------
+*/
+
+.ai-credit-row {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 16px;
+
+    padding: 12px 0;
+
+    border-bottom:
+        1px solid #f1f5f9;
+
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+.ai-credit-row:last-of-type {
+    border-bottom: none;
+}
+
+.ai-credit-row strong {
+    color: #111827;
+
+    white-space: nowrap;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| CREDIT PURCHASE BUTTONS
+|--------------------------------------------------------------------------
+*/
+
+.credit-actions {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0, 1fr)
+        );
+
+    gap: 8px;
+
+    margin-top: 18px;
+}
+
+.credit-actions button {
+    width: 100%;
+    min-height: 42px;
+
+    padding: 9px 12px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #111827;
+
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.credit-actions button:hover {
+    background: #1f2937;
+
+    transform: translateY(-1px);
+}
+
+.credit-actions button:active {
+    transform: translateY(0);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| ACCOUNT ACTIONS
+|--------------------------------------------------------------------------
+*/
+
+.account-actions-card {
+    width: 100%;
+
+    margin-bottom: 24px;
+}
+
+.account-actions {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| CHANGE PASSWORD FORM
+|--------------------------------------------------------------------------
+|
+| Account.jsx currently contains some inline styles for the
+| password form, so these rules provide a clean baseline
+| without requiring a JSX rewrite.
+|
+*/
+
+.account-actions-card h3 {
+    margin: 0 0 10px;
+
+    color: #111827;
+
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.account-actions-card p {
+    color: #6b7280;
+
+    line-height: 1.6;
+}
+
+.account-actions-card label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #374151;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.account-actions-card input {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 10px 12px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #111827;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.account-actions-card input:focus {
+    border-color: #4f46e5;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(79, 70, 229, 0.10);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| ACCOUNT ERROR
+|--------------------------------------------------------------------------
+*/
+
+.account-error {
+    width: 100%;
+
+    margin-bottom: 18px;
+
+    padding: 14px 16px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid #fecaca;
+
+    border-radius: 10px;
+
+    background: #fef2f2;
+
+    color: #991b1b;
+
+    line-height: 1.5;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| LOADING / EMPTY CONTENT
+|--------------------------------------------------------------------------
+*/
+
+.account-page > p {
+    color: #6b7280;
+
+    line-height: 1.6;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| TABLET
+| 769px - 1024px
+|--------------------------------------------------------------------------
+*/
+
+@media (max-width: 1024px) {
+
+    .account-page {
+        padding: 26px 24px;
+    }
+
+    .account-card-row {
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+
+        gap: 20px;
+
+        margin-bottom: 20px;
+    }
+
+    .account-header {
+        margin-bottom: 24px;
+    }
+
+    .account-header h1 {
+        font-size: 30px;
+    }
+
+    .account-page .payment-row {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(110px, auto);
+
+        gap: 14px;
+    }
+
+    .account-page .payment-row .payment-status {
+        grid-column: 1 / -1;
+        justify-self: start;
+    }
+
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| MOBILE
+| <= 768px
+|--------------------------------------------------------------------------
+*/
+
+@media (max-width: 768px) {
+
+    .account-page {
+        width: 100%;
+
+        padding: 22px 16px;
+    }
+
+    .account-card-row {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+        margin-bottom: 18px;
+    }
+
+    .account-header {
+        margin-bottom: 22px;
+    }
+
+    .account-header h1 {
+        font-size: 28px;
+    }
+
+    .account-header p {
+        font-size: 14px;
+    }
+
+    .account-page .payment-row {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+        padding: 14px 0;
+    }
+
+    .account-page .payment-row .payment-status {
+        grid-column: auto;
+
+        justify-self: start;
+    }
+
+    .account-page .payment-pagination {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        text-align: center;
+    }
+
+    .credit-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .account-actions {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .account-actions-card {
+        margin-bottom: 18px;
+    }
+
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| SMALL MOBILE
+| <= 425px
+|--------------------------------------------------------------------------
+*/
+
+@media (max-width: 425px) {
+
+    .account-page {
+        padding: 18px 12px;
+    }
+
+    .account-header h1 {
+        font-size: 26px;
+    }
+
+    .account-card-row {
+        gap: 16px;
+
+        margin-bottom: 16px;
+    }
+
+    .ai-credit-row {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+    .ai-credit-row strong {
+        white-space: normal;
+    }
+
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| VERY SMALL MOBILE
+| <= 375px
+|--------------------------------------------------------------------------
+*/
+
+@media (max-width: 375px) {
+
+    .account-page {
+        padding: 16px 10px;
+    }
+
+    .account-header h1 {
+        font-size: 24px;
+    }
+
+    .account-card-row {
+        gap: 14px;
+    }
+
+}
