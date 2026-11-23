@@ -6,13 +6,91 @@ BuildFunnelsAI helps real estate agents, brokers, property marketers, and agenci
 
 The frontend provides the user interface for creating, managing, editing, sharing, and tracking marketing funnels.
 
+---
+
 ## Project Overview
 
-BuildFunnelsAI is built to reduce the time and effort involved in creating marketing campaigns for individual property listings.
+BuildFunnelsAI is an AI-powered web application designed to simplify the creation of marketing funnels for real estate professionals.
 
-Instead of starting every campaign from a blank page, users can generate marketing funnel content, manage their funnels, edit generated sections, and share their work.
+Marketing a property involves more than publishing pictures and descriptions. Real estate professionals need to communicate property value, identify suitable audiences, develop persuasive marketing messages, and organize their campaigns to attract potential buyers and enquiries.
 
-This repository contains the React frontend application. The backend API is maintained separately.
+Creating these materials manually can be time-consuming, particularly when managing multiple property listings.
+
+BuildFunnelsAI addresses this challenge by using artificial intelligence to help users generate structured property marketing funnels from their property information and marketing requirements.
+
+Rather than starting every campaign from scratch, users can generate, customize, manage, and share their marketing funnels through one application.
+
+## Problem Statement
+
+Real estate professionals often face challenges when creating marketing campaigns for individual property listings.
+
+These challenges include:
+
+- Spending considerable time developing marketing content for each property.
+- Difficulty structuring property information into persuasive marketing campaigns.
+- The need to create different marketing messages for different target audiences.
+- Managing and updating multiple marketing funnels.
+- Using separate tools for different stages of the marketing process.
+
+## The Solution
+
+BuildFunnelsAI brings these activities into one platform.
+
+By integrating AI-powered content generation with funnel management and customization tools, the application helps real estate professionals streamline their property marketing workflow.
+
+Users can provide property information and marketing requirements, generate funnel content, customize the results, save their work, and share funnels through public links.
+
+## Application Screenshots
+
+### 1. Landing Page
+
+The public-facing page introduces BuildFunnelsAI and communicates its value proposition.
+
+![BuildFunnelsAI Landing Page](docs/screenshots/01-landing-page.png)
+
+### 2. Dashboard
+
+The dashboard provides users with an overview of their application activities and access to their marketing funnels.
+
+![BuildFunnelsAI Dashboard](docs/screenshots/02-dashboard.png)
+
+### 3. Funnel Creation
+
+Users provide property details and marketing information to initiate the funnel creation process.
+
+![Funnel Creation](docs/screenshots/03-funnel-creation.png)
+
+### 4. AI Funnel Generation
+
+The application processes the user's input to generate marketing funnel content using AI.
+
+![AI Funnel Generation](docs/screenshots/04-ai-generation.png)
+
+### 5. Generated Funnel
+
+Users can view the marketing funnel generated from their submitted information.
+
+![Generated Marketing Funnel](docs/screenshots/05-generated-funnel.png)
+
+### 6. Funnel Editor
+
+Users can customize and refine generated funnel content.
+
+![Funnel Editor](docs/screenshots/06-funnel-editor.png)
+
+### 7. Funnel History
+
+Users can access previously created marketing funnels.
+
+![Funnel History](docs/screenshots/07-funnel-history.png)
+
+### 8. Account, Credits and Pricing
+
+Users can access account-related features, AI credit information, and pricing options.
+
+![Account, Credits and Pricing](docs/screenshots/08-account-credits-pricing.png)
+
+---
 
 ## Key Features
 
@@ -122,6 +200,9 @@ funnel-ai/
 │   ├── App.css
 │   ├── index.css
 │   └── main.jsx
+│
+├── docs/
+│   └── screenshots/
 │
 ├── index.html
 ├── package.json
