@@ -303,7 +303,17 @@ To preview the production build:
 npm run preview
 ```
 
+## System Architecture
+
+BuildFunnelsAI uses a full-stack architecture consisting of a React frontend, Laravel backend, and MySQL database, with integrations for AI-powered content generation, payments, and product analytics.
+
+For a detailed explanation of the system components, communication flows, authentication, and external integrations, see:
+
+[**View System Architecture Documentation**](docs/architecture.md)
+
+
 ## Backend Integration
+
 
 The frontend communicates with a separate Laravel backend through Axios.
 
